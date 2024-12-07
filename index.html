@@ -220,9 +220,22 @@
                     <div class="header-content-wrapper">
                 
                         <div class="header-left-side">
-                
-                            <a href="./index.html" class="logo-link-wrapper w-nav-brand"><img src="./assets/logo-stanthony.png"
-                                    style="width: 10%;" alt="" /></a>
+                            <style>
+                                .logo-link-wrapper img {
+                                    width: 15%; /* Default width for larger screens */
+                                    margin-right: 200px; /* Default margin for larger screens */
+                                }
+                        
+                                @media (max-width: 768px) { /* Adjust this value for your desired breakpoint */
+                                    .logo-link-wrapper img {
+                                        width: 50%; /* Set width to 30% for mobile view */
+                                        margin-right: 0; /* Adjust margin as needed for mobile */
+                                    }
+                                }
+                            </style>
+                           <a href="./index.html" class="logo-link-wrapper w-nav-brand">
+                            <img src="./assets/logo-stanthony.png" alt="Logo">
+                        </a>
                             <div class="flex align-center">
                                 <nav role="navigation" class="header-nav-menu-wrapper w-nav-menu">
                                     <ul role="list" class="header-nav-menu-list">
@@ -240,138 +253,12 @@
                                     </ul>
                                 </nav>
                                 <div data-node-type="commerce-cart-wrapper" data-open-product=""
-                                    data-wf-cart-type="modal" data-wf-cart-query="query Dynamo2 {
-    database {
-      id
-      commerceOrder {
-        comment
-        extraItems {
-          name
-          pluginId
-          pluginName
-          price {
-            value
-            unit
-            decimalValue
-            string
-          }
-        }
-        id
-        startedOn
-        statusFlags {
-          hasDownloads
-          hasSubscription
-          isFreeOrder
-          requiresShipping
-        }
-        subtotal {
-          value
-          unit
-          decimalValue
-          string
-        }
-        total {
-          value
-          unit
-          decimalValue
-          string
-        }
-        updatedOn
-        userItems {
-          count
-          id
-          price {
-            value
-            unit
-            decimalValue
-            string
-          }
-          product {
-            id
-            cmsLocaleId
-            f__draft_0ht
-            f__archived_0ht
-            f_ec_product_type_2dr10dr {
-              id
-              name
-            }
-            f_name_
-            f_sku_properties_3dr {
-              id
-              name
-              enum {
-                id
-                name
-                slug
-              }
-            }
-          }
-          rowTotal {
-            value
-            unit
-            decimalValue
-            string
-          }
-          sku {
-            cmsLocaleId
-            f__draft_0ht
-            f__archived_0ht
-            f_main_image_4dr {
-              url
-              file {
-                size
-                origFileName
-                createdOn
-                updatedOn
-                mimeType
-                width
-                height
-                variants {
-                  origFileName
-                  quality
-                  height
-                  width
-                  s3Url
-                  error
-                  size
-                }
-              }
-              alt
-            }
-            f_sku_values_3dr {
-              property {
-                id
-              }
-              value {
-                id
-              }
-            }
-            id
-          }
-          subscriptionFrequency
-          subscriptionInterval
-          subscriptionTrial
-        }
-        userItemsCount
-      }
-    }
-    site {
-      id
-      commerce {
-        businessAddress {
-          country
-        }
-        defaultCountry
-        defaultCurrency
-        quickCheckoutEnabled
-      }
-    }
-  }" data-wf-page-link-href-prefix="" class="w-commerce-commercecartwrapper"><a href="#al7an"
+                                    data-wf-cart-type="modal" class="w-commerce-commercecartwrapper"><a href="#al7an"
                                         data-node-type="commerce-cart-open-link" aria-haspopup="dialog"
                                         aria-label="Open cart" role="button"
                                         data-w-id="e7e2178d-2941-8b2f-f0ae-a60577eb96e0"
                                         class="w-commerce-commercecartopenlink cart-button w-inline-block">
-                                        <div class="w-inline-block"> Courses</div> 
+                                        <div class="w-inline-block" style=""> ألحان الستويات</div> 
                                     </a>
                                   
                                 </div>
@@ -439,7 +326,7 @@
                     <div id="w-node-_71915047-2779-2715-d90c-c89658720257-feb937c1"
                         class="bg-dot top-section-grid---bottom-right-grid"></div>
                 </div>
-                <div data-w-id="1e30bb7c-4970-22bf-3000-f5abdf5a6b56" style="opacity:1"
+                <!-- <div data-w-id="1e30bb7c-4970-22bf-3000-f5abdf5a6b56" style="opacity:1"
                     class="grid-4-columns top-section---stats-grid">
                     <div id="w-node-_3da62523-c95c-60a7-3491-952fcd23c54e-feb937c1"
                         data-w-id="3da62523-c95c-60a7-3491-952fcd23c54e"
@@ -465,9 +352,9 @@
                         <div class="display-1 mg-bottom-12px">12<span class="color-accent-1">+</span></div>
                         <div class="text-200 semi-bold">خدام</div>
                     </div>
-                </div>
+                </div> -->
             </div>
-            <div class="bg-secondary-5 bottom-37-2"></div>
+            <div class="bg-secondary-5 bottom-37-2" style="padding-top: 20%;"></div>
         </div>
         <div class="section">
             <div class="container-default w-container">
@@ -529,14 +416,14 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/introduction-to-lightning-on-illustration"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbc49c764e8dd470a984c_lighting-for-illustration-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="Introduction to lighting on illustration"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
                                         srcset="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbc49c764e8dd470a984c_lighting-for-illustration-course-thumbnail-v1-elearner-webflow-ecommerce-template-p-500.jpg 500w, https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbc49c764e8dd470a984c_lighting-for-illustration-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg 792w"
                                         class="link-item---image" />
                                    
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                     <div class="mg-bottom-24px">
                                         <h3
@@ -586,14 +473,14 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/marketing-101-inbound-marketing-strategies"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbbc4eb0c0e69a0bdab7d_marketing-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي الثاني"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
                                         srcset="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbbc4eb0c0e69a0bdab7d_marketing-101-course-thumbnail-v1-elearner-webflow-ecommerce-template-p-500.jpg 500w, https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbbc4eb0c0e69a0bdab7d_marketing-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg 792w"
                                         class="link-item---image" />
                                   
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
                                     <div class="mg-bottom-24px">
@@ -644,7 +531,7 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/introduction-to-personal-finances-for-freelancers"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbb47ecc33eb3e0fe8caf_introduction-to-personal-finances-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي الثالث"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
@@ -653,7 +540,7 @@
                                     <div class="badge-wrapper-top-right">
                                        
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
                                     <div class="mg-bottom-24px">
@@ -703,7 +590,7 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/photography-101-exposure-and-white-balance"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdbabd43aa04e2e348fb1b_photography-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي الرابع"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
@@ -712,7 +599,7 @@
                                     <div class="badge-wrapper-top-right">
                                         
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                     
                                     <div class="mg-bottom-24px">
@@ -763,7 +650,7 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/design-101-how-to-design-a-great-brand"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdba37af125de279cc991b_design-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="Design 101:  How to design a great brand"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
@@ -772,7 +659,7 @@
                                     <div class="badge-wrapper-top-right">
                                         
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
                                     <div class="mg-bottom-24px">
@@ -822,7 +709,7 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/tech-stack-101-how-to-choose-the-right-framework"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb9375a896be6838a4df7_tech-stack-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي السادس"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
@@ -831,7 +718,7 @@
                                     <div class="badge-wrapper-top-right">
                                        
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
 
@@ -882,7 +769,7 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/illustration-101-character-design-animation"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb84397ca4b3858dc8b86_illustration-101-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي السابع"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
@@ -891,7 +778,7 @@
                                     <div class="badge-wrapper-top-right">
                                        
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
                                     <div class="mg-bottom-24px">
@@ -942,14 +829,14 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/introduction-to-digital-product-design"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb6fae96d5e414602ce3d_introduction-to-digital-product-design-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="Introduction to digital product design"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
                                         srcset="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb6fae96d5e414602ce3d_introduction-to-digital-product-design-course-thumbnail-v1-elearner-webflow-ecommerce-template-p-500.jpg 500w, https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb6fae96d5e414602ce3d_introduction-to-digital-product-design-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg 792w"
                                         class="link-item---image" />
                                   
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                   
                                     <div class="mg-bottom-24px">
@@ -1000,14 +887,14 @@
                             role="listitem" class="w-dyn-item"><a data-w-id="0eae42cc-4fda-e658-f97e-515e9650072b"
                                 href="/product/introduction-to-databases-mysql-and-nosql"
                                 class="card card-link-image-top w-inline-block">
-                                <div class="link-item---image-wrapper"><img
+                                <!-- <div class="link-item---image-wrapper"><img
                                         src="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb63ee60be5b9908317e0_introduction-to-databases-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg"
                                         loading="eager" alt="المستوي التاسع"
                                         sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, (max-width: 991px) 46vw, (max-width: 1439px) 30vw, 396px"
                                         srcset="https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb63ee60be5b9908317e0_introduction-to-databases-course-thumbnail-v1-elearner-webflow-ecommerce-template-p-500.jpg 500w, https://cdn.prod.website-files.com/63bc69e0c008e85acc8c02b6/63bdb63ee60be5b9908317e0_introduction-to-databases-course-thumbnail-v1-elearner-webflow-ecommerce-template.jpg 792w"
                                         class="link-item---image" />
                                    
-                                </div>
+                                </div> -->
                                 <div class="card-link-image-top---text-container pd-24px---32px">
                                    
                                     <div class="mg-bottom-24px">
