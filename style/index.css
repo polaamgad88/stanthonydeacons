@@ -4961,7 +4961,7 @@ html {
   
   .display-1 {
     color: var(--neutral--800);
-    font-size: 78px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 1.077em;
   }
@@ -8192,6 +8192,7 @@ html {
     padding-top: 80px;
     position: relative;
     overflow: hidden;
+    background-color: #f5fafe;
   }
   
   .top-section.link-cards-right-section {
@@ -12490,7 +12491,7 @@ html {
     }
   
     h3 {
-      font-size: 22px;
+      font-size: 18px;
     }
   
     h4 {
@@ -12952,7 +12953,7 @@ html {
     }
   
     .display-1 {
-      font-size: 48px;
+      font-size: 35px;
     }
   
     .grid-1-column.gap-column-24px {
