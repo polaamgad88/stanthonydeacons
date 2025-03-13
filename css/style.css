@@ -1,0 +1,116 @@
+/* MainRoots */
+:root{
+    --primary-color: #7E1215;
+    --hover-color:#720E07;
+}
+#books,#about{
+    background-image: url('../imgs/MainBackground.png');
+}
+
+/* Nav Section */
+@media screen and (max-width:530px){ 
+    nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
+        font-size: 12px;
+    }
+}
+
+.navbar{
+    background-color: #7f1215 !important;
+}
+
+/*End of Nav Section */
+
+/* Home Section */
+
+.home{
+    height: 100vh;
+    background-image: url(../imgs/MainBackground.png);
+    background-size:cover;
+    background-position: center center;
+
+}
+.home h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    color: #720E07;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-right: 20%;
+margin-left: 20%;
+}
+
+@media screen and (max-width: 750px){
+    .home h1{
+        font-size: 2rem;
+    }
+}
+.logo{
+    width: 60px;
+    height: auto;
+    
+}
+.title h2{
+    font-size: 5rem;
+    font-weight: 900;
+    color: #f4f4f4;
+    /* letter-spacing: 15px; */
+}
+.title h3{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: black;
+    
+}
+
+.btn{
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    border: #720E07 !important;
+}
+.btn:hover{
+    background-color: var(--hover-color) !important;
+}
+/* End of Home Section */
+
+/* After Home Section */
+#after-home{
+    height: 70vh;
+    background-image: url(../imgs/MainBackground.png);
+}
+/*End of After Home Section */
+
+/* About Section */
+.about{
+    color: var(--primary-color) !important;
+}
+.title{                  /*bady el parent el center 3lshan yt722 f el child*/
+   text-align: center;
+}
+
+/*End Of About Section */
+
+/* Books Section */
+
+.books{
+    color: var(--primary-color) !important; 
+}
+
+.card-img-top{
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-img-top-about{
+    
+    object-fit: cover;
+}
+/*End Of Books Section */
+
+.navbar-nav{
+    margin-right: 900px;
+}
+
+
+
+
+
