@@ -38,3 +38,19 @@ function openYouTube() {
 
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  const image = document.querySelector(".image-scroll");
+
+  function handleScroll() {
+    const imagePosition = image.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (imagePosition < screenHeight - 100) {
+      image.classList.add("show");
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll(); // Trigger on page load
+});
+
