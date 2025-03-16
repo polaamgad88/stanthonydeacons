@@ -10,7 +10,7 @@
 /* Nav Section */
 @media screen and (max-width:530px){ 
     nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
-        font-size: 12px;
+        font-size: 16px;
     }
 }
 
@@ -23,7 +23,7 @@
 /* Home Section */
 
 .home{
-    height: 100vh;
+    height: 70vh;
     background-image: url(../imgs/MainBackground.png);
     background-size:cover;
     background-position: center center;
@@ -114,3 +114,96 @@ margin-left: 20%;
 
 
 
+.card-body{
+    display: none;
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.1);}
+
+    @media (max-width: 768px) {
+        .card {
+          width: 70%; /* Increase width for better visibility */
+          margin-right: 15%;
+        }
+      }
+    
+      .card-img-top {
+        object-fit: cover; /* Prevent image distortion */
+      }
+
+ 
+      .image-scroll {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      
+      .image-scroll.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+
+
+
+      
+ 
+ 
+ 
+/* Gallery Container */
+/* Gallery Container */
+.gallery-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+.gallery {
+    background-image: url('../imgs/MainBackground.png');
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px; /* Increase spacing */
+    max-width: 1200px; /* Increase width for bigger images */
+    margin: 30px auto; /* Center the gallery */
+    margin-top: 10%;
+    padding: 15px;
+}
+
+/* Image Styling */
+.gallery img {
+    width: 100%; /* Ensure full width inside grid */
+    height: 300px; /* Set uniform height */
+    object-fit: cover; /* Crop images to fill the space */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .gallery {
+        margin-top: 10%;
+
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+    }
+    .gallery img {
+        height: 250px; /* Adjust height for medium screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        margin-top: 20%;
+        grid-template-columns: repeat(1, 1fr); /* 1 image per row on mobile */
+    }
+    .gallery img {
+        height: 200px; /* Adjust height for mobile */
+    }
+}
