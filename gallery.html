@@ -48,22 +48,25 @@
   </nav>
     <!--End OF Nav Section -->
 
-    <div class="gallery" >
+    <div class="gallery">
+      <img src="./imgs/shmamsa1.jpg" alt="Gallery 3">
+      <img src="./imgs/shmamsa2.jpg" alt="Gallery 3">
+      <img src="./imgs/shmamsa3.jpg" alt="Gallery 3">
+      <img src="./imgs/shmamsa4.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+      <img src="./imgs/anafora.jpg" alt="Gallery 3">
+  </div>
 
-      <img src="./imgs/anafora.jpg" alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-      <img src="./imgs/anafora.jpg " alt="Gallery  3">
-
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" src="">
   </div>
 
   
@@ -104,5 +107,30 @@
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const galleryImages = document.querySelectorAll('.gallery img');
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+
+          galleryImages.forEach(img => {
+              img.addEventListener('click', () => {
+                  lightbox.style.display = 'flex';
+                  lightboxImg.src = img.src;
+              });
+          });
+
+          // Close when clicking outside the image
+          lightbox.addEventListener('click', (event) => {
+              if (event.target !== lightboxImg) {
+                  closeLightbox();
+              }
+          });
+      });
+
+      function closeLightbox() {
+          document.getElementById('lightbox').style.display = 'none';
+      }
+  </script>
 </body>
 </html>
