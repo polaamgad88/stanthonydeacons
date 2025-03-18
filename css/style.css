@@ -18,16 +18,7 @@
 .navbar{
     background-color: #7f1215 !important;
 }
-*{
-    background-image: url(../imgs/MainBackground.png);
 
-}
-@media screen and (max-width: 768px){
-    *{
-        background-image: url(../imgs/MainBackground.png);
-    }
-    
-}
 
 /*End of Nav Section */
 
@@ -157,6 +148,9 @@ margin-left: 20%;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 1s ease-out, transform 1s ease-out;
+        background: url("../imgs/MainBackground.png") no-repeat center center;
+        background-size: cover;
+        padding: 20px; /* Adjust as needed */
       }
       
       .image-scroll.show {
@@ -169,7 +163,22 @@ margin-left: 20%;
 
       
  
- 
+      .image-scroll {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        
+        /* Ensure background is set */
+        background: url("../imgs/MainBackground.png") no-repeat center center;
+        background-size: cover;
+        min-height: 300px; /* Ensure height to show background */
+        width: 100%; /* Make it cover the full width */
+    }
+    
+    .image-scroll.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
  
 /* Gallery Container */
 /* Gallery Container */
