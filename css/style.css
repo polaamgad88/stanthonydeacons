@@ -8,15 +8,18 @@
 }
 
 /* Nav Section */
-@media screen and (max-width:530px){ 
+@media screen and (max-width:630px){ 
     nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
         font-size: 16px;
     }
+    
 }
 
 .navbar{
     background-color: #7f1215 !important;
 }
+
+
 
 /*End of Nav Section */
 
