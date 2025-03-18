@@ -111,7 +111,6 @@
         </div>
     </div>
 </footer>
-
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -154,36 +153,42 @@
                 .catch(error => console.log("Error fetching playlist title:", error));
         }
 
-        function fetchVideos(playlistId) {
-            const apiKey = "AIzaSyBYh7jtdMe9lXdcD3BpXBsqhHkOyWaFaWI"; // Replace with your API key
-            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=10&playlistId=${playlistId}&key=${apiKey}`;
+        function fetchVideos(playlistId, nextPageToken = "") {
+    const apiKey = "AIzaSyBYh7jtdMe9lXdcD3BpXBsqhHkOyWaFaWI"; // Replace with your API key
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=90&playlistId=${playlistId}&key=${apiKey}&pageToken=${nextPageToken}`;
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    let videosHtml = "";
-                    data.items.forEach(item => {
-                        const videoId = item.snippet.resourceId.videoId;
-                        const title = item.snippet.title.replace(/^\d+\s*/, ""); // Remove leading numbers
-                        const description = item.snippet.description.split("\n")[0]; // Show first line of description
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            let videosHtml = document.getElementById("videos").innerHTML || ""; // Keep existing videos
 
-                        videosHtml += `
-                                   <div class="col-md-4 mb-4"> <!-- This ensures 3 columns -->
-                    <div class="video-card p-3 border rounded shadow-sm text-center">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/${videoId}" 
-                            title="${title}" frameborder="0" allowfullscreen>
-                        </iframe>
-                        <h5 class="mt-2">${title}</h5>
-                        <p class="text-muted">${description}</p>
+            data.items.forEach(item => {
+                const videoId = item.snippet.resourceId.videoId;
+                const title = item.snippet.title.replace(/^\d+\s*/, ""); // Remove leading numbers
+                const description = item.snippet.description.split("\n")[0]; // Show first line of description
+
+                videosHtml += `
+                    <div class="col-md-4 mb-4">
+                        <div class="video-card p-3 border rounded shadow-sm text-center">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/${videoId}" 
+                                title="${title}" frameborder="0" allowfullscreen></iframe>
+                            <h5 class="mt-2">${title}</h5>
+                            <p class="text-muted">${description}</p>
+                        </div>
                     </div>
-                </div>
+                `;
+            });
 
-                        `;
-                    });
-                    document.getElementById("videos").innerHTML = videosHtml;
-                })
-                .catch(error => console.log("Error fetching videos:", error));
-        }
+            document.getElementById("videos").innerHTML = videosHtml;
+
+            // Check if there is another page of videos
+            if (data.nextPageToken) {
+                fetchVideos(playlistId, data.nextPageToken); // Fetch next page
+            }
+        })
+        .catch(error => console.log("Error fetching videos:", error));
+}
+
     </script>
 </body>
 </html>
