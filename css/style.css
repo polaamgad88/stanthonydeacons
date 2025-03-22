@@ -16,7 +16,7 @@
 }
 
 .navbar{
-    background-color: #7f1215 !important;
+    background-color: #7f1215 ;
 }
 
 
@@ -108,9 +108,31 @@ margin-left: 20%;
 }
 /*End Of Books Section */
 
-.navbar-nav{
-    margin-right: 900px;
+
+.navbar-nav {
+    margin-right: 90lvh; /* Base margin between logo and nav items */
 }
+
+
+@media screen and (max-width: 630px ){
+    .navbar-nav{
+align-items: center;  
+padding: 3%;
+margin-right: auto;
+}
+.navbar-nav .nav-item a{
+    color: white;
+} 
+.navbar-nav .nav-item a:hover{
+    color: grey;
+} 
+
+}
+
+
+
+
+
 
 .card-footer{
     background-color: #720E07;

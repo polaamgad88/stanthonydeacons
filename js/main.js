@@ -21,5 +21,20 @@ document.addEventListener("DOMContentLoaded", function() {
   handleScroll(); // Trigger on page load
 });
 
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).toggle(); // Close the navbar
+      }
+    });
+  });
+
+  document.addEventListener('click', function (event) {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse.classList.contains('show') && event.target.tagName === 'A') {
+      new bootstrap.Collapse(navbarCollapse).hide();
+    }
+  });
 
 
