@@ -21,20 +21,51 @@ document.addEventListener("DOMContentLoaded", function() {
   handleScroll(); // Trigger on page load
 });
 
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-      if (navbarCollapse.classList.contains('show')) {
-        new bootstrap.Collapse(navbarCollapse).toggle(); // Close the navbar
-      }
-    });
-  });
+// elly doula katboh bas gam3toh hena 3lshan el denya tb2a monazma
+//first script for google analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  document.addEventListener('click', function (event) {
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarCollapse.classList.contains('show') && event.target.tagName === 'A') {
-      new bootstrap.Collapse(navbarCollapse).hide();
-    }
-  });
+gtag('config', 'G-359NQSD1N9');
 
+// end of google analytics section
 
+// Navigation bar section
+// const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+// const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+// const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+// const header =document.querySelector('.header.container');
+
+// hamburger.addEventListener('click',()=>{
+//     hamburger.classList.toggle('active');
+//     mobile_menu.classList.toggle('active');
+// });
+
+// document.addEventListener('scroll' , () => {
+//     var scroll_position = window.scrollY;
+//     if(scroll_position > 250){
+//         header.style.backgroundColor = '#29323c';
+//     }else{
+//         header.style.backgroundColor = 'transparent';
+//     }
+// });
+// menu_item.forEach((item) => {
+//         item.addEventListener('click', () => {
+//             hamburger.classList.toggle('active');
+//             mobile_menu.classList.toggle('active');
+//         });
+
+//     });
+// end of navigation bar section
+
+// NEW NAVIGATION BAR SECTION
+document.addEventListener("scroll", function() {
+  let navbar = document.getElementById("navbar");
+  if (window.scrollY > 250) {
+      navbar.classList.add("scrolled");
+  } else {
+      navbar.classList.remove("scrolled");
+  }
+});
+// end of new navigation bar section
