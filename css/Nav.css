@@ -1,0 +1,25 @@
+/*   Navbar  */
+.navbar {
+    background: transparent;
+    transition: background-color 0.5s ease;
+}
+
+/*    when i scroll */
+.navbar.scrolled {
+    background-color: #7E1215 !important;
+}
+
+/*  el ul  */
+.navbar .nav-link {
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ddd !important;
+}
+.navbar span{
+    color: #fff ;
+}

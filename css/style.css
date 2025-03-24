@@ -4,29 +4,31 @@
     --hover-color:#720E07;
 }
 #books,#about{
-    background-image: url('../imgs/MainBackground.webp');
+    background-image: url('../imgs/MainBackground.png');
+}
+html{
+    scroll-behavior: smooth;
+}
+nav ul {
+    margin-right: 400px;
 }
 
 /* Nav Section */
-@media screen and (max-width:630px){ 
-    nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
+/* @media screen and (max-width:630px){ 
+    nav .logo-text{  
         font-size: 16px;
     }
     
-}
-
-.navbar{
-    background-color: #7f1215 ;
-}
+} */
 
 
 /*End of Nav Section */
 
 /* Home Section */
 
-.home{
+/* .home{
     height: 90vh;
-    background-image: url(../imgs/MainBackground.webp);
+    background-image: url(../imgs/MainBackground.png);
     background-size:cover;
     background-position: center center;
 
@@ -39,25 +41,25 @@
     text-align: center;
     margin-right: 20%;
 margin-left: 20%;
-}
+} */
 
-@media screen and (max-width: 750px){
-    .home h1{
+/* @media screen and (max-width: 750px){ */
+    /* .home h1{
         font-size: 2rem;
-    }
-}
-.logo{
+    } */
+
+/* .logo{
     width: 60px;
     height: auto;
     
-}
-.title h2{
+} */
+ .title h2{
     font-size: 5rem;
     font-weight: 900;
     color: #f4f4f4;
-    /* letter-spacing: 15px; */
-}
-.title h3{
+    text-align: center;
+} 
+/* .title h3{
     font-size: 2.5rem;
     font-weight: 900;
     color: black;
@@ -69,15 +71,13 @@ margin-left: 20%;
     color: #fff !important;
     border: #720E07 !important;
 }
-.btn:hover{
-    background-color: var(--hover-color) !important;
-}
+ */
 /* End of Home Section */
 
 /* After Home Section */
 #after-home{
     height: 70vh;
-    background-image: url(../imgs/MainBackground.webp);
+    background-image: url(../imgs/MainBackground.png);
 }
 /*End of After Home Section */
 
@@ -107,30 +107,6 @@ margin-left: 20%;
     object-fit: cover;
 }
 /*End Of Books Section */
-
-
-.navbar-nav {
-    margin-right: 90lvh; /* Base margin between logo and nav items */
-}
-
-
-@media screen and (max-width: 630px ){
-    .navbar-nav{
-align-items: center;  
-padding: 3%;
-margin-right: auto;
-}
-.navbar-nav .nav-item a{
-    color: white;
-} 
-.navbar-nav .nav-item a:hover{
-    color: grey;
-} 
-
-}
-
-
-
 
 
 
@@ -170,7 +146,7 @@ margin-right: auto;
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 1s ease-out, transform 1s ease-out;
-        background: url("../imgs/MainBackground.webp") no-repeat center center;
+        background: url("../imgs/MainBackground.png") no-repeat center center;
         background-size: cover;
         padding: 20px; /* Adjust as needed */
       }
@@ -191,7 +167,7 @@ margin-right: auto;
         transition: opacity 1s ease-out, transform 1s ease-out;
         
         /* Ensure background is set */
-        background: url("../imgs/MainBackground.webp") no-repeat center center;
+        background: url("../imgs/MainBackground.png") no-repeat center center;
         background-size: cover;
         min-height: 300px; /* Ensure height to show background */
         width: 100%; /* Make it cover the full width */
@@ -209,7 +185,7 @@ margin-right: auto;
     margin-bottom: 20px;
   }
 .gallery {
-    background-image: url('../imgs/MainBackground.webp');
+    background-image: url('../imgs/MainBackground.png');
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 images per row */
     gap: 20px; /* Increase spacing */
