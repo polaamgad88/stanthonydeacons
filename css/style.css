@@ -10,7 +10,7 @@
 /* Nav Section */
 @media screen and (max-width:630px){ 
     nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
-        font-size: 19px;
+        font-size: 17px;
     }
 
     .navbar-nav{
