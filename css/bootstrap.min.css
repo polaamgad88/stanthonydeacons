@@ -520,8 +520,8 @@ progress {
 }
 
 .lead {
-    font-size: 1.25rem;
-    font-weight: 300
+    font-size: larger;
+    font-weight: 500;
 }
 
 .display-1 {
@@ -9176,8 +9176,8 @@ fieldset:disabled .btn {
 }
 
 .bg-dark {
-    --bs-bg-opacity: 1;
-    background-color:#7f1215!important
+    /* --bs-bg-opacity: 1; */
+    /* background-color:#7f1215!important */
 }
 
 .bg-black {

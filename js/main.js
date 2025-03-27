@@ -38,3 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+  const navbar = document.querySelector('.navbar');
+
+  // Add a scroll event listener
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) { // Change 50 to the scroll threshold you want
+          navbar.classList.add('scrolled');
+      } else {
+          navbar.classList.remove('scrolled');
+      }
+  });x``

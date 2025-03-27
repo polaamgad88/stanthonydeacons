@@ -10,14 +10,55 @@
 /* Nav Section */
 @media screen and (max-width:630px){ 
     nav .logo-text{  /*bazbot hena el gomla beta3et el logo bas3'arha shwya 3shan tb2a responsive*/
-        font-size: 16px;
+        font-size: 19px;
     }
-    
+
+    .navbar-nav{
+        background-color: #7E1215;
+    }
+
+    .navbar-toggler-icon {
+        color: black;
+    }
+    .navbar span {
+        color: white;
+    }
+}
+/* Transparent navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
 }
 
-.navbar{
-    background-color: #7f1215 ;
+/* Navbar with background color */
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
+
+
+/*    when i scroll */
+.navbar.scrolled {
+    background-color: #7E1215 !important;
+}
+.navbar .nav-link {
+    /* color: white !important; */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ddd !important;
+}
+/* .navbar span{
+    color: #fff ;
+} */
+
 
 
 /*End of Nav Section */
@@ -26,16 +67,20 @@
 
 .home{
     height: 90vh;
-    background-image: url(../imgs/MainBackground.webp);
+    /* background-image: url(../imgs/MainBackground.webp); */
     background-size:cover;
     background-position: center center;
 
 }
 .home h1{
     font-size: 3rem;
-    font-weight: bolder;
-    color: #720E07;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    color: white;
+
+    font-weight: 500;
+    line-height: 1.2;
+
+font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-right: 20%;
 margin-left: 20%;
@@ -47,7 +92,8 @@ margin-left: 20%;
     }
 }
 .logo{
-    width: 60px;
+    
+    width: 80px;
     height: auto;
     
 }
@@ -116,7 +162,7 @@ margin-left: 20%;
 
 @media screen and (max-width: 630px ){
     .navbar-nav{
-align-items: center;  
+     align-items: center;  
 padding: 3%;
 margin-right: auto;
 }
@@ -323,4 +369,28 @@ iframe {
         right: 15px;
         font-size: 35px;
     }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1); /* Initial scale */
+    }
+    100% {
+        transform: scale(1.1); /* Zoom in slightly */
+    }
+}
+
+#home {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../imgs/shmamsa1.jpg') no-repeat center center;
+    background-size: auto;
+    height: 100vh; width: 100vw;
+    color: white;
+    animation: zoomIn 10s infinite alternate ease-in-out; /* Apply animation */
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
