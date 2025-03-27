@@ -7,58 +7,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="css/Nav.css">
-    <link rel="stylesheet" href="css/Home.css">
     <link rel="stylesheet" href="css/style.css">
+
+
     <link rel="icon" type="image/ico" href="imgs/logo-stanthony.ico">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-359NQSD1N9"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-359NQSD1N9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-359NQSD1N9');
+</script>
   </head>
 <body>
-
-  <!-- New NavBar_BIGOL -->
-  <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <!-- Logo and Name -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="imgs/white_logo.png" alt="Logo" width="50" height="50" class="me-1">
-            <span>مدرسة القديس أنطونيوس للشمامسة</span>
-        </a>
-
-        <!-- Navbar Toggler for Mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">عن المدرسة</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">المستويات</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">المعرض</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-  <!-- End OF NavBar_BIGOL -->
-
     <!-- Nav Section -->
      
-    <!-- <nav class="navbar navbar-expand-lg bg-dark navbar-dark  fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark  fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html" style="margin-right: 0px;"> 
-          <img src="imgs/white_logo.png" alt="logo" srcset="" class="logo ms-lg-5">
+          <img src="imgs/logo-stanthony.png" alt="" srcset="" class="logo ms-lg-5">
           <span class="logo-text lead" >  مدرسة القديس أنطونيوس للشمامسة</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mb-2 mb-lg-0">
             
             <li class="nav-item">
-              <a class="nav-link" href="index.html" >الرئيسية</a>
+              <a class="nav-link"  href="index.html" >الرئيسية</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./index.html#about" >عنا</a>
@@ -69,36 +48,32 @@
             <li class="nav-item">
               <a class="nav-link" href="./gallery.html" >المعرض</a>
             </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="books.html" >مكتبة المدرسة</a>
+            </li> -->
            
-
           </ul>
           
         </div>
       </div>
-  </nav> -->
+  </nav>
     <!--End OF Nav Section -->
-<!--test Bigol home section  -->
-<section id="home">
-  <div class="home d-flex align-items-center justify-content-center text-center">
-      <div class="overlay"></div> <!-- عشان نخلي الصورة غامقة -->
-      <div class="title_home">
-          <h1>مدرسة القديس أنطونيوس للشمامسة
-              <hr> مدرسة و مكتبة إلكترونية هدفها خدمة شمامسة و شعب الكنيسة من كل الأعمار عشان نستمتع بكل حاجة كنيستنا الرائعة بتقدّمها لنا
-          </h1>
-      </div>
-  </div>
-</section>
-<!-- end of test home section  -->
+
    <!-- Home Section -->
-   <!-- <section id="home">
+   <section id="home">
     <div class="home d-flex align-items-center justify-content-center"> 
       <div class="title text-white-50 font-monospace text-uppercase">
         <h1>مدرسة القديس أنطونيوس للشمامسة
           <hr> مدرسة و مكتبة إلكترونية هدفها خدمة شمامسة و شعب الكنيسة من كل الأعمار عشان نستمتع بكل حاجة كنيستنا الرائعة بتقدّمها لنا
+
         </h1>
+
       </div>
     </div>
+
   </section>
+
+  
 
   <section>
     <img src="./imgs/shmamsa1.jpg" alt="" class="img-fluid image-scroll">
@@ -117,7 +92,7 @@
     
         observer.observe(image);
     });
-    </script> -->
+    </script>
     
 
 
@@ -168,7 +143,7 @@
             
             <a href="./mstwa.html?courseId=1" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/المستوى الاول.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/المستوى الاول.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الأول</h5>
                  
@@ -186,7 +161,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=2" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى الثانى.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى الثانى.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الثاني</h5>
                   
@@ -203,7 +178,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=3" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى الثالث.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى الثالث.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الثالث</h5>
                 </div>
@@ -218,7 +193,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=4" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى الرابع.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى الرابع.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الرابع</h5>
                 </div>
@@ -233,7 +208,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=5" class="text-decoration-none">
               <div class="card h-100">
-                <img src="./imgs/صورة المستوى الخامس.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="./imgs/صورة المستوى الخامس.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الخامس</h5>
                 </div>
@@ -248,7 +223,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=6" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى السادس.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى السادس.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي السادس</h5>
                 </div>
@@ -263,7 +238,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=7" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى السابع.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى السابع.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي السابع</h5>
                 </div>
@@ -278,7 +253,7 @@
           <div class="col">
             <a href="./mstwa.html?courseId=8" class="text-decoration-none">
               <div class="card h-100">
-                <img src="imgs/صورة المستوى الثامن.png" class="card-img-top h-100" alt="Book Cover">
+                <img src="imgs/صورة المستوى الثامن.webp" class="card-img-top h-100" alt="Book Cover">
                 <div class="card-body">
                   <h5 class="card-title d-flex justify-content-center">المستوي الثامن</h5>
                 </div>
@@ -339,5 +314,8 @@
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>
